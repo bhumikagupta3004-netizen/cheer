@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You 💋</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      padding-top: 120px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 22px;
+      color: #333;
+    }
+
+    button {
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .kiss {
+      position: absolute;
+      font-size: 30px;
+      animation: floatUp 4s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-600px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hey cutiepie 💖</h1>
+
+  <p>I just want to say that</p>
+  <p><b>you’re my favourite 🫶</b></p>
+  <p>and here’s a big kissie from me to youuu 💋</p>
+
+  <button onclick="sendKiss()">Click for a kiss 😘</button>
+
+  <script>
+    function sendKiss() {
+      alert("Muaaaah 💋💖");
+
+      for (let i = 0; i < 15; i++) {
+        let kiss = document.createElement("div");
+        kiss.className = "kiss";
+        kiss.innerHTML = "💋";
+        kiss.style.left = Math.random() * 100 + "vw";
+        kiss.style.bottom = "0px";
+        kiss.style.animationDuration = (2 + Math.random() * 3) + "s";
+        document.body.appendChild(kiss);
+
+        setTimeout(() => {
+          kiss.remove();
+        }, 4000);
+      }
+    }
+  </script>
+
+</body>
+</html>
